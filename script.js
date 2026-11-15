@@ -49,7 +49,7 @@ const PROJECTS = [
       Stack: 'Zero-dependency Python, Groq models',
       Result: '3.2x lower latency and 31% lower cost with identical outputs',
     },
-    links: [['Watch the demo', 'https://drive.google.com/file/d/1quUxlf0JabOfA2Tj0aRxoeCU1s2ZCtsP/view?usp=sharing']],
+    links: [['Watch the demo', 'https://drive.google.com/file/d/1quUxlf0JabOfA2Tj0aRxoeCU1s2ZCtsP/view?usp=sharing'], ['GitHub', 'https://github.com/TanmayMahajan26/Synapse']],
     stats: [['3.2x', 'lower latency'], ['31%', 'lower cost'], ['123', 'automated tests']],
     flowTitle: 'How a workflow gets compiled',
     flow: ['Agent workflow', 'Dependency graph', 'Parallelization', 'Caching', 'Model routing', 'Structural validation'],
@@ -72,10 +72,7 @@ const PROJECTS = [
       Built: 'IIT Hyderabad AI Hackathon',
       Result: 'Top 4 Finalist — selected for the offline final round',
     },
-    links: [
-      ['Live demo', 'https://wellsync-ai.vercel.app/'],
-      ['GitHub', 'https://github.com/Xombi17/wellsync-ai-flutterapp'],
-    ],
+    links: [['Live demo', 'https://wellsync-ai.vercel.app/']],
     bullets: [
       'Built using APIs with 5 live agents working together.',
       'Developed a dedicated Android application alongside the web platform.',
