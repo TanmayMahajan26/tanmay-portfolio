@@ -344,7 +344,8 @@ function openSheet(route, push = true) {
   sheetBody.innerHTML = html;
   sheetBody.scrollTop = 0;
   overlay.hidden = false;
-  sheet.focus({ preventScroll: true });
+  // focus the scrolling area so arrow keys, Space and Page Up/Down scroll it
+  sheetBody.focus({ preventScroll: true });
   if (push && location.hash.slice(1) !== route) history.pushState(null, '', '#' + route);
 }
 
@@ -382,7 +383,7 @@ document.addEventListener('keydown', (e) => {
   if (e.key === 'Tab' && !overlay.hidden) {
     const f = [...sheet.querySelectorAll('a[href], button')];
     const first = f[0], last = f[f.length - 1];
-    if (e.shiftKey && (document.activeElement === first || document.activeElement === sheet)) { e.preventDefault(); last.focus(); }
+    if (e.shiftKey && (document.activeElement === first || document.activeElement === sheet || document.activeElement === sheetBody)) { e.preventDefault(); last.focus(); }
     else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
   }
 });
