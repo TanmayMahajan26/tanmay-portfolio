@@ -151,6 +151,7 @@ const AWARDS = [
 
 const cert = (title, url) => `<a href="${url}" target="_blank" rel="noopener">${title}</a>`;
 const CERTS = [
+  { when: 'Oct 2026', org: cert('Google Cloud Engineering Certificate', 'https://www.credly.com/badges/dce1b63a-8854-475b-be57-c53f3a7a40ef/linked_in_profile'), role: 'Google' },
   { when: 'Oct 2026', org: cert('AWS Academy Graduate — Cloud Architecting', 'https://www.credly.com/badges/d591a997-7c9f-40eb-8bc4-7fd58229d11d/linked_in_profile'), role: 'Amazon Web Services' },
   { when: 'Jul 2025', org: cert('Data Analytics Job Simulation', 'https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/9PBTqmSxAf6zZTseP/io9DzWKe3PTsiS6GG_9PBTqmSxAf6zZTseP_QarCZFQEKrnwwJ6Q3_1751643421900_completion_certificate.pdf'), role: 'Deloitte Australia · Forage' },
   { when: 'Jun 2025', org: cert('Cyber Job Simulation', 'https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/9PBTqmSxAf6zZTseP/E9pA6qsdbeyEkp3ti_9PBTqmSxAf6zZTseP_QarCZFQEKrnwwJ6Q3_1751306194128_completion_certificate.pdf'), role: 'Deloitte Australia · Forage' },
@@ -175,7 +176,7 @@ const EDUCATION = [
 const SKILLS = {
   Languages: ['C', 'C++', 'Java', 'Python', 'JavaScript', 'Dart'],
   Development: ['MERN stack', 'Next.js', 'FastAPI', 'Flutter', 'REST APIs', 'HTML', 'CSS'],
-  'AI & cloud': ['LLM APIs (Gemini, Claude)', 'AI agent workflows', 'Machine learning', 'AWS cloud architecting'],
+  'AI & cloud': ['LLM APIs (Gemini, Claude)', 'AI agent workflows', 'Machine learning', 'AWS cloud architecting', 'Google Cloud'],
   'Database & tools': ['SQL', 'Git', 'GitHub', 'Postman'],
   'Beyond code': ['Problem solving (DSA)', 'Team collaboration', 'Communication', 'Content planning', 'Social media marketing', 'Video editing'],
   'Spoken languages': ['English', 'Hindi', 'Marathi', 'Sanskrit'],
