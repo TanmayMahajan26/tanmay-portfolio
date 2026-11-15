@@ -246,7 +246,7 @@ const VIEWS = {
     <div class="about" style="margin-top:26px">
       <aside class="idcard">
         <div class="idcard__top">BUILDER PASS</div>
-        <div class="avatar">${ME.photo ? `<img src="${ME.photo}" alt="${ME.name}" />` : 'TM'}</div>
+        <div class="avatar">${ME.photo ? `<img src="${ME.photo}" alt="${ME.name}, software engineer" width="400" height="400" />` : 'TM'}</div>
         <dl>
           <div><dt>Name</dt><dd>${ME.name}</dd></div>
           <div><dt>Focus</dt><dd>AI &amp; full-stack development</dd></div>
