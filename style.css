@@ -359,8 +359,8 @@ button {
 
 /* layout — landscape box */
 .obj--projects   { --x: 2%;  --y: 3%;  --w: 47%; --r: -5deg; --z: 2; }
-.obj--awards     { --x: 47%; --y: 1%;  --w: 16%; --r: -14deg; --z: 1; }
-.obj--about      { --x: 54%; --y: 21%; --w: 21%; --r: 7deg;  --z: 4; }
+.obj--awards     { --x: 44%; --y: 1%;  --w: 18%; --r: -12deg; --z: 1; }
+.obj--about      { --x: 57%; --y: 23%; --w: 21%; --r: 7deg;  --z: 4; }
 .obj--contact    { --x: 79%; --y: 3%;  --w: 16%; --r: 11deg; --z: 2; }
 .obj--experience { --x: 3%;  --y: 55%; --w: 34%; --r: 4deg;  --z: 2; }
 .obj--resume     { --x: 38%; --y: 58%; --w: 20%; --r: -7deg; --z: 5; }

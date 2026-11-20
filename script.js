@@ -265,26 +265,61 @@ const ART = {
   },
 
   medal() {
+    // a gold medal lying flat: striped ribbon loop, bevelled rim, embossed face
+    const cx = 120, cy = 224;
+    const leaf = (deg, side) => {
+      const a = (deg * Math.PI) / 180;
+      const x = (cx + 47 * Math.cos(a)).toFixed(1);
+      const y = (cy + 47 * Math.sin(a)).toFixed(1);
+      const rot = deg + 90 + side * 28;
+      return `<ellipse cx="${x}" cy="${y}" rx="7.5" ry="3.2" transform="rotate(${rot} ${x} ${y})"/>`;
+    };
+    const leaves = [...[100, 120, 140, 160, 180, 198].map((d) => leaf(d, 1)), ...[80, 60, 40, 20, 0, -18].map((d) => leaf(d, -1))].join('');
+    const loop = 'M120 158 C 80 120 42 64 68 26 C 82 6 116 6 132 18 C 168 50 170 110 120 158';
     return `<svg viewBox="0 0 240 300"><defs>
-      <linearGradient id="mdStrapL" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1d3d5c"/><stop offset="1" stop-color="#0f2236"/></linearGradient>
-      <linearGradient id="mdStrapR" x1="1" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#28507a"/><stop offset="1" stop-color="#16304a"/></linearGradient>
-      <radialGradient id="mdGold" cx=".34" cy=".28" r=".85"><stop offset="0" stop-color="#fff6cf"/><stop offset=".32" stop-color="#f7cd55"/><stop offset=".72" stop-color="#d39a1e"/><stop offset="1" stop-color="#94640b"/></radialGradient>
-      <linearGradient id="mdRim" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffeaa8"/><stop offset=".5" stop-color="#c88f17"/><stop offset="1" stop-color="#7d5207"/></linearGradient>
-      <linearGradient id="mdStar" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff3c2"/><stop offset="1" stop-color="#e3aa2c"/></linearGradient></defs>
-      <path d="M36 0 H100 L142 150 L112 162 Z" fill="url(#mdStrapL)"/>
-      <path d="M58 0 H76 L126 156 L118 159 Z" fill="#e8603c"/><path d="M80 0 H84 L130 154 L127 155 Z" fill="#fff" fill-opacity=".8"/>
-      <path d="M204 0 H140 L98 150 L128 162 Z" fill="url(#mdStrapR)"/>
-      <path d="M182 0 H164 L114 156 L122 159 Z" fill="#e8603c" fill-opacity=".92"/><path d="M160 0 H156 L110 154 L113 155 Z" fill="#fff" fill-opacity=".7"/>
-      <path d="M98 150 L142 150 L128 162 L112 162 Z" fill="#000" fill-opacity=".35"/>
-      <rect x="108" y="146" width="24" height="26" rx="7" fill="none" stroke="url(#mdRim)" stroke-width="6"/>
-      <circle cx="120" cy="216" r="80" fill="url(#mdRim)"/>
-      <circle cx="120" cy="216" r="71" fill="url(#mdGold)"/>
-      <circle cx="120" cy="216" r="58" fill="none" stroke="#a87512" stroke-opacity=".6" stroke-width="2"/>
-      <circle cx="120" cy="216" r="55" fill="none" stroke="#fff3c2" stroke-opacity=".35" stroke-width="1"/>
-      <path transform="translate(1.8 2.4)" d="M120 178 L127.35 197.89 L148.53 198.73 L131.89 211.86 L137.63 232.27 L120 220.5 L102.37 232.27 L108.11 211.86 L91.47 198.73 L112.65 197.89 Z" fill="#7d5207" fill-opacity=".55"/>
-      <path d="M120 178 L127.35 197.89 L148.53 198.73 L131.89 211.86 L137.63 232.27 L120 220.5 L102.37 232.27 L108.11 211.86 L91.47 198.73 L112.65 197.89 Z" fill="url(#mdStar)"/>
-      <text x="120" y="256" text-anchor="middle" font-family="JetBrains Mono, monospace" font-weight="700" font-size="11" letter-spacing="2" fill="#7d5207">2026</text>
-      <path d="M64 180 A66 66 0 0 1 132 150" fill="none" stroke="#fff" stroke-opacity=".45" stroke-width="5" stroke-linecap="round"/></svg>`;
+      <filter id="mdSoft" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="3"/></filter>
+      <filter id="mdGlow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="7"/></filter>
+      <linearGradient id="mdSheen" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".22"/><stop offset=".4" stop-color="#fff" stop-opacity="0"/><stop offset=".75" stop-color="#000" stop-opacity=".18"/></linearGradient>
+      <linearGradient id="mdRim" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stop-color="#fff4c8"/><stop offset=".18" stop-color="#e9bb45"/><stop offset=".42" stop-color="#946510"/>
+        <stop offset=".58" stop-color="#f7dc84"/><stop offset=".8" stop-color="#a8770f"/><stop offset="1" stop-color="#ffe7a0"/></linearGradient>
+      <linearGradient id="mdBevel" x1="1" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#fff0b8"/><stop offset=".5" stop-color="#d7a330"/><stop offset="1" stop-color="#7a5006"/></linearGradient>
+      <radialGradient id="mdFace" cx=".38" cy=".34" r=".8"><stop offset="0" stop-color="#ffeaa6"/><stop offset=".45" stop-color="#ebba45"/><stop offset="1" stop-color="#b9831a"/></radialGradient>
+      <linearGradient id="mdRaised" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff5cf"/><stop offset="1" stop-color="#e7b440"/></linearGradient>
+      <path id="mdArc" d="M81.9 202 A44 44 0 0 1 158.1 202"/></defs>
+
+      <path d="${loop}" transform="translate(3 5)" fill="none" stroke="#000" stroke-opacity=".45" stroke-width="36" filter="url(#mdSoft)"/>
+      <path d="${loop}" fill="none" stroke="#18324d" stroke-width="34" stroke-linejoin="round"/>
+      <path d="${loop}" fill="none" stroke="#f3efe6" stroke-width="15" stroke-linejoin="round"/>
+      <path d="${loop}" fill="none" stroke="#e8603c" stroke-width="10" stroke-linejoin="round"/>
+      <path d="${loop}" fill="none" stroke="url(#mdSheen)" stroke-width="34" stroke-linejoin="round"/>
+      <path d="M68 26 C 82 6 116 6 132 18" fill="none" stroke="#000" stroke-opacity=".22" stroke-width="34"/>
+
+      <circle cx="${cx}" cy="150" r="9" fill="none" stroke="#7a5006" stroke-width="5.5"/>
+      <circle cx="${cx}" cy="150" r="9" fill="none" stroke="url(#mdRim)" stroke-width="4"/>
+
+      <circle cx="${cx}" cy="${cy}" r="72" fill="url(#mdRim)"/>
+      <circle cx="${cx}" cy="${cy}" r="64" fill="url(#mdBevel)"/>
+      <circle cx="${cx}" cy="${cy}" r="60" fill="url(#mdFace)"/>
+      <circle cx="${cx + 0.8}" cy="${cy + 0.8}" r="53" fill="none" stroke="#fff3c4" stroke-opacity=".55" stroke-width="1.4"/>
+      <circle cx="${cx}" cy="${cy}" r="53" fill="none" stroke="#7a5006" stroke-opacity=".55" stroke-width="1.4"/>
+
+      <g fill="#7a5006" fill-opacity=".55" transform="translate(1 1.3)">${leaves}</g>
+      <g fill="url(#mdRaised)">${leaves}</g>
+
+      <text font-family="JetBrains Mono, monospace" font-weight="700" font-size="7.4" letter-spacing="1.6" fill="#7a5006" fill-opacity=".85"><textPath href="#mdArc" startOffset="50%" text-anchor="middle">HACKATHON · 2026</textPath></text>
+
+      <g font-family="Space Grotesk, sans-serif" font-weight="700" text-anchor="middle">
+        <text x="${cx - 6 - 1}" y="${cy + 21 - 1}" font-size="56" fill="#fff6d2" fill-opacity=".7">1</text>
+        <text x="${cx - 6 + 1.6}" y="${cy + 21 + 1.8}" font-size="56" fill="#7a5006" fill-opacity=".6">1</text>
+        <text x="${cx - 6}" y="${cy + 21}" font-size="56" fill="url(#mdRaised)">1</text>
+        <text x="${cx + 17 + 1}" y="${cy - 3 + 1.2}" font-size="15" fill="#7a5006" fill-opacity=".6">ST</text>
+        <text x="${cx + 17}" y="${cy - 3}" font-size="15" fill="url(#mdRaised)">ST</text>
+      </g>
+
+      <ellipse cx="96" cy="190" rx="30" ry="14" transform="rotate(-38 96 190)" fill="#fff" fill-opacity=".38" filter="url(#mdGlow)"/>
+      <path d="M58.6 186 A71 71 0 0 1 110 153.7" fill="none" stroke="#fff" stroke-opacity=".7" stroke-width="2.4" stroke-linecap="round"/>
+      <path d="M181.4 262 A71 71 0 0 1 150 288" fill="none" stroke="#5a3a04" stroke-opacity=".5" stroke-width="2.4" stroke-linecap="round"/></svg>`;
   },
 
   badge() {
