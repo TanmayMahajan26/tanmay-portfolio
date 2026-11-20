@@ -28,54 +28,192 @@
   <meta name="twitter:image" content="https://tanmay.devs.surf/assets/og.jpg" />
   <meta name="theme-color" content="#e9e2cf" />
 
+  <!-- seo:jsonld -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "WebSite",
-        "@id": "https://tanmay.devs.surf/#website",
-        "url": "https://tanmay.devs.surf/",
-        "name": "Tanmay Mahajan",
-        "alternateName": "Tanmay Mahajan Portfolio",
-        "inLanguage": "en"
-      },
-      {
-        "@type": "ProfilePage",
-        "@id": "https://tanmay.devs.surf/#profilepage",
-        "url": "https://tanmay.devs.surf/",
-        "name": "Tanmay Mahajan — Software Engineer, AI & Full-Stack Developer",
-        "isPartOf": { "@id": "https://tanmay.devs.surf/#website" },
-        "mainEntity": { "@id": "https://tanmay.devs.surf/#person" }
-      },
-      {
-        "@type": "Person",
-        "@id": "https://tanmay.devs.surf/#person",
-        "name": "Tanmay Mahajan",
-        "givenName": "Tanmay",
-        "familyName": "Mahajan",
-        "url": "https://tanmay.devs.surf/",
-        "image": "https://tanmay.devs.surf/assets/me.jpg",
-        "email": "mailto:tanmay261006@gmail.com",
-        "jobTitle": "Full Stack Developer Intern",
-        "description": "Software engineer and AI / full-stack developer; Computer Engineering student at Fr. Conceicao Rodrigues College of Engineering, Mumbai.",
-        "worksFor": { "@type": "Organization", "name": "THE xDEVS" },
-        "alumniOf": [
-          { "@type": "CollegeOrUniversity", "name": "Fr. Conceicao Rodrigues College of Engineering" },
-          { "@type": "School", "name": "St. Xavier's International School & Jr College" }
-        ],
-        "address": { "@type": "PostalAddress", "addressLocality": "Mumbai", "addressRegion": "Maharashtra", "addressCountry": "IN" },
-        "knowsLanguage": ["English", "Hindi", "Marathi", "Sanskrit"],
-        "knowsAbout": ["Software engineering", "Full-stack development", "Artificial intelligence", "Machine learning", "Python", "JavaScript", "Next.js", "FastAPI", "MERN stack", "Flutter", "LLM APIs"],
-        "award": ["1st Place — CODEISSANCE 2026, TSEC Codestorm", "Top 4 Finalist — IIT Hyderabad AI Hackathon", "Finalist — SPIT Airavat 3.0"],
-        "sameAs": [
-          "https://www.linkedin.com/in/tanmay-mahajan-220ab826b/",
-          "https://github.com/TanmayMahajan26"
-        ]
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://tanmay.devs.surf/#website",
+      "url": "https://tanmay.devs.surf/",
+      "name": "Tanmay Mahajan",
+      "alternateName": "Tanmay Mahajan Portfolio",
+      "inLanguage": "en",
+      "publisher": {
+        "@id": "https://tanmay.devs.surf/#person"
       }
-    ]
-  }
+    },
+    {
+      "@type": "ProfilePage",
+      "@id": "https://tanmay.devs.surf/#profilepage",
+      "url": "https://tanmay.devs.surf/",
+      "name": "Tanmay Mahajan — Software Engineer, AI & Full-Stack Developer",
+      "isPartOf": {
+        "@id": "https://tanmay.devs.surf/#website"
+      },
+      "mainEntity": {
+        "@id": "https://tanmay.devs.surf/#person"
+      },
+      "dateModified": "2026-11-21"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://tanmay.devs.surf/#person",
+      "name": "Tanmay Mahajan",
+      "givenName": "Tanmay",
+      "familyName": "Mahajan",
+      "url": "https://tanmay.devs.surf/",
+      "image": "https://tanmay.devs.surf/assets/me.jpg",
+      "email": "mailto:tanmay261006@gmail.com",
+      "jobTitle": "Full Stack Developer Intern",
+      "description": "Software Engineer, AI & Full-Stack Developer; Computer Engineering student at Fr. Conceicao Rodrigues College of Engineering, Mumbai.",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "THE xDEVS",
+        "url": "https://www.linkedin.com/company/the-xdevs/"
+      },
+      "affiliation": {
+        "@type": "Organization",
+        "name": "TEDxCRCE",
+        "url": "https://www.linkedin.com/company/tedxcrce/"
+      },
+      "alumniOf": [
+        {
+          "@type": "CollegeOrUniversity",
+          "name": "Fr. Conceicao Rodrigues College of Engineering",
+          "url": "https://frcrce.ac.in/"
+        },
+        {
+          "@type": "School",
+          "name": "St. Xavier's International School & Jr College"
+        }
+      ],
+      "homeLocation": {
+        "@type": "Place",
+        "name": "Mumbai, Maharashtra, India"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Mumbai",
+        "addressRegion": "Maharashtra",
+        "addressCountry": "IN"
+      },
+      "knowsLanguage": [
+        "English",
+        "Hindi",
+        "Marathi",
+        "Sanskrit"
+      ],
+      "knowsAbout": [
+        "Software engineering",
+        "Full-stack development",
+        "Artificial intelligence",
+        "C",
+        "C++",
+        "Java",
+        "Python",
+        "JavaScript",
+        "Dart",
+        "MERN stack",
+        "Next.js",
+        "FastAPI",
+        "Flutter",
+        "REST APIs",
+        "LLM APIs (Gemini, Claude)",
+        "AI agent workflows",
+        "Machine learning",
+        "AWS cloud architecting",
+        "Google Cloud"
+      ],
+      "award": [
+        "1st Place — CODEISSANCE 2026, TSEC Codestorm",
+        "Top 4 Finalist — IIT Hyderabad AI Hackathon",
+        "Finalist — SPIT Airavat 3.0",
+        "Grand Finale Finalist — Bit N Build ’26",
+        "Visa 24hr AI Hackathon — IIT Madras"
+      ],
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Google Cloud Engineering Certificate",
+          "credentialCategory": "certificate",
+          "recognizedBy": {
+            "@type": "Organization",
+            "name": "Google"
+          },
+          "url": "https://www.credly.com/badges/dce1b63a-8854-475b-be57-c53f3a7a40ef/linked_in_profile"
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "AWS Academy Graduate — Cloud Architecting",
+          "credentialCategory": "certificate",
+          "recognizedBy": {
+            "@type": "Organization",
+            "name": "Amazon Web Services"
+          },
+          "url": "https://www.credly.com/badges/d591a997-7c9f-40eb-8bc4-7fd58229d11d/linked_in_profile"
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Data Analytics Job Simulation",
+          "credentialCategory": "certificate",
+          "recognizedBy": {
+            "@type": "Organization",
+            "name": "Deloitte Australia · Forage"
+          },
+          "url": "https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/9PBTqmSxAf6zZTseP/io9DzWKe3PTsiS6GG_9PBTqmSxAf6zZTseP_QarCZFQEKrnwwJ6Q3_1751643421900_completion_certificate.pdf"
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Cyber Job Simulation",
+          "credentialCategory": "certificate",
+          "recognizedBy": {
+            "@type": "Organization",
+            "name": "Deloitte Australia · Forage"
+          },
+          "url": "https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/9PBTqmSxAf6zZTseP/E9pA6qsdbeyEkp3ti_9PBTqmSxAf6zZTseP_QarCZFQEKrnwwJ6Q3_1751306194128_completion_certificate.pdf"
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Introduction to Generative AI",
+          "credentialCategory": "certificate",
+          "recognizedBy": {
+            "@type": "Organization",
+            "name": "Google Cloud Skills Boost"
+          },
+          "url": "https://www.cloudskillsboost.google/public_profiles/90940190-f7e6-4ac6-807f-bee8d645b695/badges/16419714"
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Introduction to Large Language Models",
+          "credentialCategory": "certificate",
+          "recognizedBy": {
+            "@type": "Organization",
+            "name": "Google Cloud Skills Boost"
+          },
+          "url": "https://www.cloudskillsboost.google/public_profiles/90940190-f7e6-4ac6-807f-bee8d645b695/badges/16419994"
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Introduction to Responsible AI",
+          "credentialCategory": "certificate",
+          "recognizedBy": {
+            "@type": "Organization",
+            "name": "Google Cloud Skills Boost"
+          },
+          "url": "https://www.cloudskillsboost.google/public_profiles/90940190-f7e6-4ac6-807f-bee8d645b695/badges/16420070"
+        }
+      ],
+      "sameAs": [
+        "https://www.linkedin.com/in/tanmay-mahajan-220ab826b/",
+        "https://github.com/TanmayMahajan26"
+      ]
+    }
+  ]
+}
   </script>
+    <!-- /seo:jsonld -->
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='3' y='8' width='26' height='20' rx='3' fill='%23d2a26d'/%3E%3Crect x='3' y='8' width='26' height='6' rx='2' fill='%23b98652'/%3E%3Crect x='13' y='8' width='6' height='20' fill='%23f0dfb8'/%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -103,25 +241,28 @@
   <!-- ================= DESK SCENE ================= -->
   <main class="scene" id="scene">
 
-    <!-- Text summary of the portfolio for search engines and screen readers.
-         Mirrors what the box shows; keep it in sync with the data in script.js. -->
+    <!-- Text summary for search engines and screen readers, generated from data.js
+         by tools/build-seo.mjs. Do not edit by hand. -->
+    <!-- seo:summary -->
     <header class="sr-only">
       <h1>Tanmay Mahajan — Software Engineer, AI &amp; Full-Stack Developer</h1>
-      <p>Tanmay Mahajan is a software engineer and AI / full-stack developer based in Mumbai, India. He is a Computer Engineering student at Fr. Conceicao Rodrigues College of Engineering (Fr. CRCE), a Full Stack Developer Intern at THE xDEVS, and Executive Producer at TEDxCRCE.</p>
+      <p>Tanmay Mahajan is a software engineer and AI / full-stack developer based in Mumbai, India. Tanmay is studying B.E. Computer Engineering at Fr. Conceicao Rodrigues College of Engineering (Fr. CRCE, 2024 – 2028), works as a Full Stack Developer Intern at THE xDEVS, and is Executive Producer of TEDxCRCE.</p>
+      <p>Tanmay builds AI products end to end: financial data platforms, risk-aware systems and tooling for AI agents. Most of them started at hackathons, including Nexus360, which won 1st place at CODEISSANCE 2026 (TSEC Codestorm). <a href="about/">More about Tanmay Mahajan</a>.</p>
       <h2>Projects by Tanmay Mahajan</h2>
       <ul>
-        <li><a href="#projects/nexus360">Nexus360</a> — AI identity resolution and Customer 360 platform with a 7-stage matching pipeline. 1st place at CODEISSANCE 2026, TSEC Codestorm.</li>
-        <li><a href="#projects/synapse">SYNAPSE</a> — a Python compiler and observability platform for AI agent workflows: 3.2x lower latency and 31% lower cost with identical outputs.</li>
-        <li><a href="#projects/wellsync">WellSync AI</a> — full-stack health platform with five live AI agents and an Android app. Top 4 finalist at the IIT Hyderabad AI Hackathon.</li>
-        <li><a href="#projects/justicegrid">JusticeGrid</a> — AI legal intelligence platform for India’s undertrial prisoner crisis, built with Next.js, FastAPI and Gemini. Finalist at SPIT Airavat 3.0.</li>
-        <li><a href="#projects/zenthera">Zenthera</a> — antimicrobial resistance prediction pipeline trained on 148,000+ bacterial genome records at 92.4% accuracy; published in IJRIAS.</li>
-        <li><a href="#projects/fra-tracker">FRA Tracker</a> — Forest Rights Act monitoring system with a WebGIS decision support system, built for Smart India Hackathon.</li>
+        <li><a href="projects/nexus360/">Nexus360</a> — AI identity resolution and Customer 360 platform. 1st Place · CODEISSANCE 2026.</li>
+        <li><a href="projects/synapse/">SYNAPSE</a> — Compiler and observability platform for AI agent workflows. 3.2x faster · 31% cheaper.</li>
+        <li><a href="projects/wellsync/">WellSync AI</a> — Full-stack health platform with live AI agents. Top 4 Finalist · IIT Hyderabad.</li>
+        <li><a href="projects/justicegrid/">JusticeGrid</a> — AI legal intelligence for India’s undertrial prisoner crisis. Finalist · SPIT Airavat 3.0.</li>
+        <li><a href="projects/zenthera/">Zenthera</a> — High-speed antimicrobial resistance prediction pipeline. Published paper.</li>
+        <li><a href="projects/fra-tracker/">FRA Tracker</a> — Forest Rights Act monitoring system (Smart India Hackathon). SIH.</li>
       </ul>
       <h2>Skills</h2>
-      <p>Python, JavaScript, C, C++, Java, Dart, MERN stack, Next.js, FastAPI, Flutter, REST APIs, SQL, LLM APIs (Gemini, Claude), machine learning, AWS and Google Cloud.</p>
+      <p>C, C++, Java, Python, JavaScript, Dart, MERN stack, Next.js, FastAPI, Flutter, REST APIs, LLM APIs (Gemini, Claude), AI agent workflows, Machine learning, AWS cloud architecting and Google Cloud.</p>
       <h2>Contact Tanmay Mahajan</h2>
       <p>Email <a href="mailto:tanmay261006@gmail.com">tanmay261006@gmail.com</a>, or find Tanmay on <a href="https://www.linkedin.com/in/tanmay-mahajan-220ab826b/" rel="me">LinkedIn</a> and <a href="https://github.com/TanmayMahajan26" rel="me">GitHub</a>. <a href="assets/Tanmay_Mahajan_Resume_MS.pdf">Download résumé (PDF)</a>.</p>
     </header>
+    <!-- /seo:summary -->
 
     <!-- desk clutter (decorative) -->
     <div class="desk-item mug" style="--d:14" aria-hidden="true">
@@ -220,6 +361,7 @@
     </div>
   </noscript>
 
+  <script src="data.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

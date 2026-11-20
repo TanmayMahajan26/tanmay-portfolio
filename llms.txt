@@ -1,0 +1,24 @@
+# Tanmay Mahajan
+
+> Tanmay Mahajan is a software engineer and AI / full-stack developer based in Mumbai, India. Tanmay is studying B.E. Computer Engineering at Fr. Conceicao Rodrigues College of Engineering (Fr. CRCE, 2024 – 2028), works as a Full Stack Developer Intern at THE xDEVS, and is Executive Producer of TEDxCRCE. Tanmay builds AI products end to end: financial data platforms, risk-aware systems and tooling for AI agents. Most of them started at hackathons, including Nexus360, which won 1st place at CODEISSANCE 2026 (TSEC Codestorm).
+
+Canonical site: https://tanmay.devs.surf/
+
+## Pages
+
+- [About Tanmay Mahajan](https://tanmay.devs.surf/about/): bio, experience, education, hackathons, certifications, skills and FAQ
+- [Projects by Tanmay Mahajan](https://tanmay.devs.surf/projects/): all projects
+- [Nexus360](https://tanmay.devs.surf/projects/nexus360/): AI identity resolution and Customer 360 platform (1st Place · CODEISSANCE 2026)
+- [SYNAPSE](https://tanmay.devs.surf/projects/synapse/): Compiler and observability platform for AI agent workflows (3.2x faster · 31% cheaper)
+- [WellSync AI](https://tanmay.devs.surf/projects/wellsync/): Full-stack health platform with live AI agents (Top 4 Finalist · IIT Hyderabad)
+- [JusticeGrid](https://tanmay.devs.surf/projects/justicegrid/): AI legal intelligence for India’s undertrial prisoner crisis (Finalist · SPIT Airavat 3.0)
+- [Zenthera](https://tanmay.devs.surf/projects/zenthera/): High-speed antimicrobial resistance prediction pipeline (Published paper)
+- [FRA Tracker](https://tanmay.devs.surf/projects/fra-tracker/): Forest Rights Act monitoring system (Smart India Hackathon) (SIH)
+- [Full text for AI assistants](https://tanmay.devs.surf/llms-full.txt)
+
+## Profiles
+
+- [LinkedIn](https://www.linkedin.com/in/tanmay-mahajan-220ab826b/)
+- [GitHub](https://github.com/TanmayMahajan26)
+- [Résumé (PDF)](https://tanmay.devs.surf/assets/Tanmay_Mahajan_Resume_MS.pdf)
+- Email: tanmay261006@gmail.com

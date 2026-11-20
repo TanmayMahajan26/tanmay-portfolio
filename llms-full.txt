@@ -1,0 +1,136 @@
+# Tanmay Mahajan — Software Engineer, AI & Full-Stack Developer
+
+Tanmay Mahajan is a software engineer and AI / full-stack developer based in Mumbai, India. Tanmay is studying B.E. Computer Engineering at Fr. Conceicao Rodrigues College of Engineering (Fr. CRCE, 2024 – 2028), works as a Full Stack Developer Intern at THE xDEVS, and is Executive Producer of TEDxCRCE.
+
+Tanmay builds AI products end to end: financial data platforms, risk-aware systems and tooling for AI agents. Most of them started at hackathons, including Nexus360, which won 1st place at CODEISSANCE 2026 (TSEC Codestorm).
+
+Website: https://tanmay.devs.surf/ · LinkedIn: https://www.linkedin.com/in/tanmay-mahajan-220ab826b/ · GitHub: https://github.com/TanmayMahajan26 · Email: tanmay261006@gmail.com
+
+## Experience
+
+- **Full Stack Developer Intern · Mumbai, hybrid**, THE xDEVS (Oct 2026 – Present)
+- **Executive Producer**, TEDxCRCE (June 2026 – Present): Leading event-day production — content, stage management, technology and video — including AV needs, camera operators and livestream.
+- **Video & Content Editor · Internship, remote**, Virtue Crennovative Solutions (Jan 2026 – May 2026): Edited and produced video content for digital platforms; created social media visuals and collaborated with marketing teams.
+- **Social Media Manager**, TEDxCRCE (May 2025 – May 2026): Led social media strategy across Instagram and LinkedIn, creating content and analysing engagement metrics.
+
+## Education
+
+- B.E. Computer Engineering, Fr. Conceicao Rodrigues College of Engineering (2024 – 2028)
+- Junior college, St. Xavier’s International School & Jr College (2022 – 2024)
+- School, Smt. Kantaben Chandulal Gandhi English School (2009 – 2022)
+
+## Projects
+
+### Nexus360 — AI identity resolution and Customer 360 platform
+
+1st Place · CODEISSANCE 2026. Category: AI · Data platform. Built: CODEISSANCE 2026, TSEC Codestorm. Result: 1st Place — Industry domain, Customer 360 problem statement.
+
+- Built a 7-stage matching pipeline to unify customer records across Equity, Mutual Funds, Insurance, Loans and Wealth systems.
+- Implemented conflict detection with explainable matches and an interactive identity graph.
+- Added AI verification for high-risk cases, a what-if threshold simulator, audit trails and RBAC.
+
+Links: [Live demo](https://codeissance-26-skill-issue.vercel.app/) · [GitHub](https://github.com/TanmayMahajan26/CODEISSANCE_26_Skill-Issue)
+Page: https://tanmay.devs.surf/projects/nexus360/
+
+### SYNAPSE — Compiler and observability platform for AI agent workflows
+
+3.2x faster · 31% cheaper. Category: AI infrastructure · Compilers. Stack: Zero-dependency Python, Groq models. Result: 3.2x lower latency and 31% lower cost with identical outputs.
+
+- Built a zero-dependency Python compiler that turns AI agent workflows into dependency-aware graphs.
+- Applied parallelization, caching and model routing, each checked by structural validation and 123 automated tests.
+- Cut latency 3.2x and cost 31% with identical outputs on real Groq models.
+- Added a safety guard so side-effecting steps are never cached, merged or reordered.
+
+Links: [Watch the demo](https://drive.google.com/file/d/1quUxlf0JabOfA2Tj0aRxoeCU1s2ZCtsP/view?usp=sharing) · [GitHub](https://github.com/TanmayMahajan26/Synapse)
+Page: https://tanmay.devs.surf/projects/synapse/
+
+### WellSync AI — Full-stack health platform with live AI agents
+
+Top 4 Finalist · IIT Hyderabad. Category: Health · Multi-agent AI. Built: IIT Hyderabad AI Hackathon. Result: Top 4 Finalist — selected for the offline final round.
+
+- Built using APIs with 5 live agents working together.
+- Developed a dedicated Android application alongside the web platform.
+- Implemented real-time health tracking on a scalable backend architecture.
+
+Links: [Live demo](https://wellsync-ai.vercel.app/)
+Page: https://tanmay.devs.surf/projects/wellsync/
+
+### JusticeGrid — AI legal intelligence for India’s undertrial prisoner crisis
+
+Finalist · SPIT Airavat 3.0. Category: Legal tech · NLP. Stack: Next.js 14, FastAPI, Gemini 2.0 Flash. Result: Finalist — Sardar Patel Institute of Technology Airavat 3.0.
+
+- Built a paralegal dashboard that surfaces high-priority undertrial cases.
+- Wrote an S.479 BNSS eligibility engine to flag who may qualify for release.
+- Combined multilingual NLP with adjournment-prediction ML.
+
+Links: [Live demo](https://skill-issue-airavat-3-0.vercel.app/)
+Page: https://tanmay.devs.surf/projects/justicegrid/
+
+### Zenthera — High-speed antimicrobial resistance prediction pipeline
+
+Published paper. Category: Bioinformatics · Machine learning. Method: k-mer based genomic analysis + ML. Result: Published in IJRIAS.
+
+- Built a high-speed antimicrobial resistance (AMR) prediction pipeline using k-mer based genomic analysis and machine learning.
+- Trained and evaluated on 148,000+ bacterial genome records, achieving 92.4% accuracy.
+
+Links: [Live demo](http://zenthera-ml.onrender.com/) · [Read the paper](https://rsisinternational.org/journals/ijrias/view/zenthera-a-high-speed-antimicrobial-resistance-prediction-pipeline-using-k-mer-analysis-and-tree-based-ensembles)
+Page: https://tanmay.devs.surf/projects/zenthera/
+
+### FRA Tracker — Forest Rights Act monitoring system (Smart India Hackathon)
+
+SIH. Category: GovTech · WebGIS. Built: Smart India Hackathon. Coverage: Madhya Pradesh, Tripura, Odisha, Telangana.
+
+- Developed an AI-powered FRA Atlas for Forest Rights Act data.
+- Built a WebGIS-based Decision Support System (DSS) for integrated monitoring of FRA implementation across four states.
+
+Page: https://tanmay.devs.surf/projects/fra-tracker/
+
+## Hackathons and awards
+
+- **1st Place — CODEISSANCE 2026, TSEC Codestorm**: Won with Nexus360 in the Industry domain (Customer 360 problem statement).
+- **Top 4 Finalist — IIT Hyderabad AI Hackathon**: Selected for the offline final round; built WellSync AI.
+- **Finalist — SPIT Airavat 3.0**: Sardar Patel Institute of Technology. Built JusticeGrid for India’s undertrial prisoner crisis.
+- **Grand Finale Finalist — Bit N Build ’26**: International hackathon by Google Developer Groups on Campus, Fr. CRCE (Nov 2026).
+- **Visa 24hr AI Hackathon — IIT Madras**: Selected for the offline hackathon round at Shaastra 2026.
+
+## Certifications
+
+- Google Cloud Engineering Certificate — Google (Oct 2026): https://www.credly.com/badges/dce1b63a-8854-475b-be57-c53f3a7a40ef/linked_in_profile
+- AWS Academy Graduate — Cloud Architecting — Amazon Web Services (Oct 2026): https://www.credly.com/badges/d591a997-7c9f-40eb-8bc4-7fd58229d11d/linked_in_profile
+- Data Analytics Job Simulation — Deloitte Australia · Forage (Jul 2025): https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/9PBTqmSxAf6zZTseP/io9DzWKe3PTsiS6GG_9PBTqmSxAf6zZTseP_QarCZFQEKrnwwJ6Q3_1751643421900_completion_certificate.pdf
+- Cyber Job Simulation — Deloitte Australia · Forage (Jun 2025): https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/9PBTqmSxAf6zZTseP/E9pA6qsdbeyEkp3ti_9PBTqmSxAf6zZTseP_QarCZFQEKrnwwJ6Q3_1751306194128_completion_certificate.pdf
+- Introduction to Generative AI — Google Cloud Skills Boost (Jun 2025): https://www.cloudskillsboost.google/public_profiles/90940190-f7e6-4ac6-807f-bee8d645b695/badges/16419714
+- Introduction to Large Language Models — Google Cloud Skills Boost (Jun 2025): https://www.cloudskillsboost.google/public_profiles/90940190-f7e6-4ac6-807f-bee8d645b695/badges/16419994
+- Introduction to Responsible AI — Google Cloud Skills Boost (Jun 2025): https://www.cloudskillsboost.google/public_profiles/90940190-f7e6-4ac6-807f-bee8d645b695/badges/16420070
+
+## Skills
+
+- Languages: C, C++, Java, Python, JavaScript, Dart
+- Development: MERN stack, Next.js, FastAPI, Flutter, REST APIs, HTML, CSS
+- AI & cloud: LLM APIs (Gemini, Claude), AI agent workflows, Machine learning, AWS cloud architecting, Google Cloud
+- Database & tools: SQL, Git, GitHub, Postman
+- Beyond code: Problem solving (DSA), Team collaboration, Communication, Content planning, Social media marketing, Video editing
+- Spoken languages: English, Hindi, Marathi, Sanskrit
+
+## FAQ
+
+**Who is Tanmay Mahajan?**
+Tanmay Mahajan is a software engineer and AI / full-stack developer based in Mumbai, India. Tanmay is studying B.E. Computer Engineering at Fr. Conceicao Rodrigues College of Engineering (Fr. CRCE, 2024 – 2028), works as a Full Stack Developer Intern at THE xDEVS, and is Executive Producer of TEDxCRCE. Tanmay builds AI products end to end: financial data platforms, risk-aware systems and tooling for AI agents. Most of them started at hackathons, including Nexus360, which won 1st place at CODEISSANCE 2026 (TSEC Codestorm).
+
+**What projects has Tanmay Mahajan built?**
+Tanmay Mahajan has built Nexus360 (AI identity resolution and Customer 360 platform), SYNAPSE (Compiler and observability platform for AI agent workflows), WellSync AI (Full-stack health platform with live AI agents), JusticeGrid (AI legal intelligence for India’s undertrial prisoner crisis), Zenthera (High-speed antimicrobial resistance prediction pipeline) and FRA Tracker (Forest Rights Act monitoring system).
+
+**Which hackathons has Tanmay Mahajan won or been a finalist in?**
+1st Place — CODEISSANCE 2026, TSEC Codestorm, Top 4 Finalist — IIT Hyderabad AI Hackathon, Finalist — SPIT Airavat 3.0, Grand Finale Finalist — Bit N Build ’26 and Visa 24hr AI Hackathon — IIT Madras.
+
+**What technologies does Tanmay Mahajan work with?**
+Languages: C, C++, Java, Python, JavaScript and Dart. Development: MERN stack, Next.js, FastAPI, Flutter, REST APIs, HTML and CSS. AI and cloud: LLM APIs (Gemini, Claude), AI agent workflows, Machine learning, AWS cloud architecting and Google Cloud.
+
+**Where does Tanmay Mahajan study?**
+Tanmay Mahajan studies B.E. Computer Engineering at Fr. Conceicao Rodrigues College of Engineering in Mumbai (2024 – 2028). Before that, Tanmay attended St. Xavier’s International School & Jr College (2022 – 2024).
+
+**Is Tanmay Mahajan open to internships or collaborations?**
+Yes. Tanmay is open to software and AI engineering internships, hackathon teams and collaborations.
+
+**How can I contact Tanmay Mahajan?**
+Email tanmay261006@gmail.com, or message Tanmay on LinkedIn (https://www.linkedin.com/in/tanmay-mahajan-220ab826b/) or GitHub (https://github.com/TanmayMahajan26).
