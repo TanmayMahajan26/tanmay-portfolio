@@ -485,3 +485,104 @@ if (matchMedia('(hover: hover) and (prefers-reduced-motion: no-preference)').mat
   window.addEventListener('pointermove', (e) => { mx = e.clientX; my = e.clientY; queue(); }, { passive: true });
   document.documentElement.addEventListener('pointerleave', () => { mx = my = -1e5; queue(); });
 }
+
+/* =========================================================
+   Code rain behind the desk. Most columns fall as random
+   code glyphs; now and then one spells out my name.
+   ========================================================= */
+(() => {
+  const canvas = $('#rain');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  const GLYPHS = '0101010123456789ABCDEF{}[]()<>/\|=+-*#$%&;:λΣΩ'.split('');
+  const WORDS = ['TANMAY MAHAJAN', 'TANMAY MAHAJAN', 'TANMAY', 'MAHAJAN'];
+  const NAME_CHANCE = 0.02; // per new drop: roughly one name every couple of seconds
+  const FPS = 22;
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let W = 0, H = 0, size = 16, cols = 0, rows = 0, drops = [], raf = 0, last = 0;
+
+  const glyph = () => GLYPHS[(Math.random() * GLYPHS.length) | 0];
+  const newDrop = (scatter) => ({
+    y: scatter ? -Math.random() * rows : -Math.random() * 20,
+    speed: 0.45 + Math.random() * 0.65,
+    word: Math.random() < NAME_CHANCE ? WORDS[(Math.random() * WORDS.length) | 0] : null,
+    i: 0,
+    prev: null,
+  });
+
+  function resize() {
+    const dpr = Math.min(window.devicePixelRatio || 1, 1.5);
+    W = innerWidth;
+    H = innerHeight;
+    canvas.width = Math.round(W * dpr);
+    canvas.height = Math.round(H * dpr);
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    size = W < 640 ? 14 : 17;
+    cols = Math.ceil(W / size);
+    rows = Math.ceil(H / size);
+    drops = Array.from({ length: cols }, () => newDrop(true));
+    ctx.fillStyle = '#030806';
+    ctx.fillRect(0, 0, W, H);
+    ctx.font = `600 ${size}px "JetBrains Mono", ui-monospace, monospace`;
+    ctx.textBaseline = 'top';
+  }
+
+  function step() {
+    // fade what is already there, which leaves the trails
+    ctx.fillStyle = 'rgba(3, 8, 6, 0.075)';
+    ctx.fillRect(0, 0, W, H);
+    for (let c = 0; c < cols; c++) {
+      const d = drops[c];
+      const before = Math.floor(d.y);
+      d.y += d.word ? 1 : d.speed;
+      const row = Math.floor(d.y);
+      if (row === before || row < 0) continue;
+      const x = c * size;
+      // the previous head settles into the trail colour
+      if (d.prev && !d.prev.name) {
+        ctx.fillStyle = '#16c25c';
+        ctx.fillText(d.prev.ch, x, d.prev.row * size);
+      }
+      let ch, name = false;
+      if (d.word) {
+        ch = d.word[d.i++];
+        if (ch === undefined) { d.word = null; ch = glyph(); } else name = true;
+      } else ch = glyph();
+      if (ch !== ' ') {
+        if (name) {
+          ctx.shadowColor = '#39ff88';
+          ctx.shadowBlur = 14;
+          ctx.fillStyle = '#f0fff5';
+        } else ctx.fillStyle = '#b8ffd2';
+        ctx.fillText(ch, x, row * size);
+        ctx.shadowBlur = 0;
+      }
+      d.prev = { ch, row, name };
+      if (row > rows && Math.random() > 0.965) drops[c] = newDrop(false);
+    }
+  }
+
+  function loop(t) {
+    raf = requestAnimationFrame(loop);
+    if (t - last < 1000 / FPS) return;
+    last = t;
+    if (!overlay.hidden) return; // nothing to see behind an open sheet
+    step();
+  }
+
+  resize();
+  if (reduce) {
+    for (let i = 0; i < rows * 1.2; i++) step();
+  } else {
+    raf = requestAnimationFrame(loop);
+  }
+
+  let timer = 0;
+  window.addEventListener('resize', () => {
+    clearTimeout(timer);
+    timer = setTimeout(() => {
+      resize();
+      if (reduce) for (let i = 0; i < rows * 1.2; i++) step();
+    }, 150);
+  });
+})();
