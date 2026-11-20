@@ -388,14 +388,26 @@ const ART = {
       ${key(4, 38, 100, 6, 'teal', '{ }')}${key(5, 124, 104, -6, 'light', 'SQL')}</svg>`;
   },
 
-  pen() {
-    return `<svg viewBox="0 0 320 26"><defs>
-      <linearGradient id="pnBody" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5a606a"/><stop offset=".4" stop-color="#1d2025"/><stop offset="1" stop-color="#0c0e11"/></linearGradient>
-      <linearGradient id="pnGold" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffeaa8"/><stop offset=".5" stop-color="#d39a1e"/><stop offset="1" stop-color="#7d5207"/></linearGradient></defs>
-      <path d="M18 5 H268 L306 13 L268 21 H18 A8 8 0 0 1 18 5 Z" fill="url(#pnBody)"/>
-      <path d="M300 11.6 L314 13 L300 14.4 Z" fill="#c9ced6"/>
-      <rect x="206" y="4.5" width="5" height="17" fill="url(#pnGold)"/>
-      <rect x="26" y="1.5" width="118" height="5" rx="2.5" fill="url(#pnGold)"/></svg>`;
+  resume() {
+    // a printed one-page résumé with a dog-eared corner
+    const line = (x, y, w, c = '#d9d5cc') => `<rect x="${x}" y="${y}" width="${w}" height="4.5" rx="2.25" fill="${c}"/>`;
+    const section = (y, rows) => `<rect x="20" y="${y}" width="44" height="6" rx="3" fill="#e8603c"/>${rows.map((w, i) => line(20, y + 14 + i * 10, w)).join('')}`;
+    return `<svg viewBox="0 0 220 300"><defs>
+      <linearGradient id="rsPaper" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset=".7" stop-color="#f4f2ec"/><stop offset="1" stop-color="#e7e3da"/></linearGradient>
+      <linearGradient id="rsFold" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#d8d3c8"/><stop offset="1" stop-color="#fbfaf6"/></linearGradient></defs>
+      <path d="M0 0 H186 L220 34 V300 H0 Z" fill="url(#rsPaper)"/>
+      <path d="M186 0 V26 a8 8 0 0 0 8 8 H220 Z" fill="url(#rsFold)"/>
+      <path d="M186 0 V26 a8 8 0 0 0 8 8 H220" fill="none" stroke="#000" stroke-opacity=".08"/>
+      <text x="110" y="34" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="17" letter-spacing=".5" fill="#1c2a3a">TANMAY MAHAJAN</text>
+      <text x="110" y="48" text-anchor="middle" font-family="Inter, sans-serif" font-size="7.5" fill="#55616f">Mumbai · tanmay.devs.surf · GitHub · LinkedIn</text>
+      <rect x="20" y="56" width="180" height="1.2" fill="#1c2a3a" fill-opacity=".5"/>
+      ${section(66, [176, 150])}
+      ${section(104, [180, 164, 120, 172, 140])}
+      ${section(174, [168, 150, 176])}
+      ${section(222, [160, 132])}
+      <rect x="160" y="262" width="44" height="22" rx="5" fill="#d93a2b"/>
+      <text x="182" y="277" text-anchor="middle" font-family="JetBrains Mono, monospace" font-weight="700" font-size="11" fill="#fff">PDF</text>
+      <path d="M0 0 H186 L220 34 V300 H0 Z" fill="none" stroke="#000" stroke-opacity=".07"/></svg>`;
   },
 };
 

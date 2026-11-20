@@ -186,6 +186,7 @@ button {
   display: grid;
   place-items: center;
   overflow: hidden;
+  padding-top: 64px;
 }
 
 .desk-item {
@@ -234,7 +235,7 @@ button {
 
 .box {
   position: relative;
-  width: min(86vw, 760px, calc((100dvh - 220px) * 1.42));
+  width: min(90vw, 1120px, calc((100dvh - 210px) * 1.42));
   aspect-ratio: 142 / 100;
   container-type: inline-size;
   animation: box-drop 0.9s var(--spring) both;
@@ -344,28 +345,26 @@ button {
   opacity: 0.85;
 }
 
-button.obj:hover, button.obj:focus-visible { z-index: 10; }
+:is(a, button).obj:hover, :is(a, button).obj:focus-visible { z-index: 10; }
 
-button.obj:hover .obj__art, button.obj:focus-visible .obj__art {
+:is(a, button).obj:hover .obj__art, :is(a, button).obj:focus-visible .obj__art {
   transform: translateY(-1.100cqw) scale(1.035);
   filter: drop-shadow(0 0.600cqw 0.600cqw rgba(0, 0, 0, 0.35)) drop-shadow(0 3.200cqw 3cqw rgba(0, 0, 0, 0.5)) brightness(0.8);
 }
 
-button.obj:hover .obj__label, button.obj:focus-visible .obj__label { opacity: 1; transform: translateY(-1.100cqw); }
+:is(a, button).obj:hover .obj__label, :is(a, button).obj:focus-visible .obj__label { opacity: 1; transform: translateY(-1.100cqw); }
 
 /* when one object is picked up, the rest dim a little */
-.tray:has(button.obj:hover) .obj:not(:hover) .obj__art { filter: drop-shadow(0 0.300cqw 0.300cqw rgba(0, 0, 0, 0.45)) drop-shadow(0 1.400cqw 1.800cqw rgba(0, 0, 0, 0.38)) brightness(0.72); }
-
-.obj--pen { pointer-events: none !important; }
+.tray:has(:is(a, button).obj:hover) .obj:not(:hover) .obj__art { filter: drop-shadow(0 0.300cqw 0.300cqw rgba(0, 0, 0, 0.45)) drop-shadow(0 1.400cqw 1.800cqw rgba(0, 0, 0, 0.38)) brightness(0.72); }
 
 /* layout — landscape box */
-.obj--projects   { --x: 3%;  --y: 5%;  --w: 44%; --r: -6deg; --z: 2; }
-.obj--awards     { --x: 46%; --y: 2%;  --w: 16%; --r: -14deg; --z: 1; }
-.obj--about      { --x: 55%; --y: 25%; --w: 19%; --r: 7deg;  --z: 3; }
-.obj--contact    { --x: 79%; --y: 5%;  --w: 14%; --r: 12deg; --z: 2; }
-.obj--experience { --x: 5%;  --y: 54%; --w: 31%; --r: 4deg;  --z: 2; }
-.obj--skills     { --x: 70%; --y: 55%; --w: 27%; --r: -6deg; --z: 2; }
-.obj--pen        { --x: 38%; --y: 82%; --w: 31%; --r: -9deg; --z: 1; }
+.obj--projects   { --x: 2%;  --y: 3%;  --w: 47%; --r: -5deg; --z: 2; }
+.obj--awards     { --x: 47%; --y: 1%;  --w: 16%; --r: -14deg; --z: 1; }
+.obj--about      { --x: 54%; --y: 21%; --w: 21%; --r: 7deg;  --z: 4; }
+.obj--contact    { --x: 79%; --y: 3%;  --w: 16%; --r: 11deg; --z: 2; }
+.obj--experience { --x: 3%;  --y: 55%; --w: 34%; --r: 4deg;  --z: 2; }
+.obj--resume     { --x: 38%; --y: 58%; --w: 20%; --r: -7deg; --z: 5; }
+.obj--skills     { --x: 66%; --y: 59%; --w: 31%; --r: -6deg; --z: 2; }
 
 /* touch screens can't hover: keep the labels visible */
 @media (hover: none) {
@@ -995,7 +994,7 @@ button.obj:hover .obj__label, button.obj:focus-visible .obj__label { opacity: 1;
    --------------------------------------------------------- */
 @media (max-width: 640px) and (orientation: portrait) {
   .box {
-    width: min(84vw, calc((100dvh - 230px) * 0.78));
+    width: min(90vw, calc((100dvh - 250px) * 0.78));
     aspect-ratio: 78 / 100;
   }
 
@@ -1003,13 +1002,13 @@ button.obj:hover .obj__label, button.obj:focus-visible .obj__label { opacity: 1;
   .lid { border-radius: 6.500cqw; inset: -2.400cqw; }
   .obj__label b { font-size: clamp(14px, 5.6cqw, 24px); }
   .obj__label small { font-size: clamp(8px, 2.4cqw, 11px); }
-  .obj--projects   { --x: 5%;  --y: 4%;  --w: 60%; --r: -5deg; }
-  .obj--contact    { --x: 72%; --y: 4%;  --w: 21%; --r: 9deg; }
-  .obj--awards     { --x: 6%;  --y: 40%; --w: 27%; --r: -9deg; }
-  .obj--about      { --x: 39%; --y: 37%; --w: 31%; --r: 5deg; }
-  .obj--experience { --x: 4%;  --y: 67%; --w: 46%; --r: 4deg; }
-  .obj--skills     { --x: 55%; --y: 72%; --w: 40%; --r: -6deg; }
-  .obj--pen        { display: none; }
+  .obj--projects   { --x: 4%;  --y: 3%;  --w: 62%; --r: -5deg; }
+  .obj--contact    { --x: 70%; --y: 3%;  --w: 25%; --r: 9deg; }
+  .obj--awards     { --x: 4%;  --y: 39%; --w: 28%; --r: -9deg; }
+  .obj--about      { --x: 33%; --y: 36%; --w: 34%; --r: 5deg; }
+  .obj--resume     { --x: 69%; --y: 45%; --w: 26%; --r: 8deg; }
+  .obj--experience { --x: 3%;  --y: 68%; --w: 46%; --r: 4deg; }
+  .obj--skills     { --x: 51%; --y: 73%; --w: 45%; --r: -6deg; }
 
   .lid__tape { height: 22cqw; }
   .lid__label { padding: 4cqw 7cqw 5cqw; }
